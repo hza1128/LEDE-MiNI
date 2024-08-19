@@ -35,17 +35,17 @@ git clone https://github.com/sbwml/luci-app-mosdns -b v5 package/mosdns
 git clone https://github.com/sbwml/v2ray-geodata package/v2ray-geodata
 
 # kenzo源 科学上网插件与依赖
-sed -i '2i src-git small https://github.com/kenzok8/small' feeds.conf.default
+sed -i '$a src-git smpackage https://github.com/kenzok8/small-package' feeds.conf.default
 
 # openclash
-git clone -b main https://github.com/oppen321/openclash package/openclash
+# git clone -b main https://github.com/oppen321/openclash package/openclash
 
 # istoreos商店
 git clone -b main https://github.com/linkease/istore-ui package/istoreos-ui
 git clone -b main https://github.com/linkease/istore package/istoreos
 
 # Adguardhome
-git clone -b main https://github.com/oppen321/luci-app-adguardhome package/luci-app-adguardhome
+# git clone -b main https://github.com/oppen321/luci-app-adguardhome package/luci-app-adguardhome
 
 
 ./scripts/feeds update -a
