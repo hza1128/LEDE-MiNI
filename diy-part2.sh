@@ -16,6 +16,9 @@ sed -i 's/192.168.1.1/192.168.10.12/g' package/base-files/files/bin/config_gener
 # R4S机型调整网口,wan/lan对调，以适配T4机型
 sed -i "s,'eth1' 'eth0','eth0' 'eth1',g" target/linux/rockchip/armv8/base-files/etc/board.d/02_network
 
+# 修复rk35xx报错
+sed -i '/^UBOOT_TARGETS := rk3528-evb rk3588-evb/s/^/#/' package/boot/uboot-rk35xx/Makefile
+
 # Modify default theme
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
 
